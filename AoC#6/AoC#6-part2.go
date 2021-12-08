@@ -23,48 +23,11 @@ func main() {
 
 	sort.Ints(pos_crabs)
 
-	// fmt.Println(pos_crabs)
-
 	avg := int(Avg(pos_crabs))
-
-	// occMap := make(map[int]int, 0)
-
-	// for _, n := range pos_crabs {
-	// 	if float64(n) > avg {
-	// 		occMap[n]++
-	// 	} else {
-	// 		break
-	// 	}
-	// }
-
-	// fmt.Println(occMap)
-
-	// target := findMostOcc(occMap)
-
-	// fmt.Println(target)
 
 	res := calcFuel(pos_crabs, avg - 1)
 
 	fmt.Println(res)
-
-	// min := res
-
-	// flag := true
-
-	// for flag {
-	// 	avg += 1
-	// 	res_temp := calcFuel(pos_crabs, avg)
-
-	// 	if min > res_temp {
-	// 		min = res_temp
-	// 	}
-
-	// 	if min < res_temp {
-	// 		flag = false
-	// 	}
-	// }
-
-	// fmt.Println(min)
 }
 
 func calcFuel(slice []int, target int) int {
@@ -78,20 +41,6 @@ func calcFuel(slice []int, target int) int {
 	}
 
 	return tot_fuel
-}
-
-func findMostOcc(map_ map[int]int) int {
-	var pos int
-	max := -1
-
-	for i, v := range map_ {
-		if v > max {
-			max = v
-			pos = i
-		}
-	}
-
-	return pos
 }
 
 func Avg(slice []int) float64 {
