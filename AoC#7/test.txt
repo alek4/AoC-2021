@@ -1,0 +1,7 @@
+ dddd
+c    b
+c    b
+ gggg
+a    e
+a    e
+ ffff
